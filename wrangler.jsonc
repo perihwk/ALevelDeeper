@@ -1,0 +1,13 @@
+{
+  "name": "aleveldeeper",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "aleveldeeper.org", "custom_domain": true },
+    { "pattern": "www.aleveldeeper.org", "custom_domain": true }
+  ]
+}

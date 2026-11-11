@@ -1,0 +1,29 @@
+baseURL = "https://aleveldeeper.org/"
+locale = "en-US"
+title = "ALevelDeeper"
+theme = "PaperMod"
+
+# Keep output lean: no RSS/sitemap noise beyond what is useful, no pagination of tiny lists.
+enableRobotsTXT = true
+disableKinds = ["taxonomy"]
+pagerSize = 20
+
+[minify]
+  minifyOutput = true
+
+[params]
+  description = "Going a level deeper."
+  defaultTheme = "auto"
+  disableThemeToggle = true
+  ShowReadingTime = true
+  ShowCodeCopyButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowToc = false
+
+[markup.highlight]
+  noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]

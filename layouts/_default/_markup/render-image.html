@@ -1,0 +1,13 @@
+{{- /* Images become lazy <img>; .mp4/.webm become small looping muted videos. Each is wrapped in a <figure> with a centered caption from the markdown title ("..."), falling back to the alt text. */ -}}
+{{- $dest := .Destination -}}
+{{- $caption := .Title | default .PlainText -}}
+<figure style="text-align:center;margin:1em 0">
+{{- if or (strings.HasSuffix $dest ".mp4") (strings.HasSuffix $dest ".webm") -}}
+<video src="{{ $dest }}" controls muted loop playsinline preload="metadata" aria-label="{{ .PlainText }}" style="max-width:100%"></video>
+{{- else -}}
+<img src="{{ $dest }}" alt="{{ .PlainText }}" loading="lazy" style="max-width:100%">
+{{- end -}}
+{{- with $caption }}
+<figcaption style="text-align:center;font-size:0.9em;opacity:0.75;margin-top:0.4em">{{ . }}</figcaption>
+{{- end }}
+</figure>

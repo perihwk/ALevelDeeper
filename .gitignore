@@ -1,0 +1,8 @@
+public/
+resources/
+.hugo_build.lock
+.wrangler/
+.DS_Store
+
+# Raw screen recordings: convert to mp4 before adding to a post
+*.mov
